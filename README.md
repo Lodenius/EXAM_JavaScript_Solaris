@@ -1,4 +1,3 @@
-![poster](./poster.png)
 
 # Solaris
 En webbplats byggd med HTML, CSS & vanilla JS om vårt solsystem.
