@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="./index.html"><</a>
+    <section class="planet-wrapper">
+        
+        <section class="planet-card">
+            <h1>${planet.name}</h1>
+            <h3>${planet.latinName}</h3>
+            <p>${planet.desc}</p>
+        <div></div>
+        <section class="planet-card__info">
+            <article>
+                <p class="bold">OMKRETS</p>
+                <p>${planet.circumference}</p>
+            </article>
+            <article>
+                <p class="bold">KM FRÅN SOLEN</p>
+                <p>${planet.distance}</p>
+            </article>
+            <article>
+                <p class="bold">MAX TEMPERATUR</p>
+                <p>${planet.temp.day}</p>
+            </article>
+            <article>
+                <p class="bold">MIN TEMPERATUR</p>
+                <p>${planet.temp.night}</p>
+            </article>
+        </section>
+        <div></div>
+        <article>
+            <p class="bold">MÅNAR</p>
+            <p>${planet.moons}</p>
+        </article>
+    </section>
+</section>
+
+
+
+</body>
+</html>

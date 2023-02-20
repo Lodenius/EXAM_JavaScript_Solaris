@@ -1,0 +1,129 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    height: 98vh;
+    width: 98vw;
+    background-image: url(./img/ivan-guerrero-dR7L9hHWvAI-unsplash.jpg);
+    background-size: cover;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.planet-search {
+    display: flex;
+    justify-content: end;
+}
+
+input[type=text]{
+    border: none;
+    height: 30px;
+    border-bottom: 1px solid pink;
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    margin-right: 1rem;
+}
+
+input[type=button]{
+    background-color: #18335100;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+header {
+    text-align: center;
+}
+
+h1 {
+    font-size: 50px;
+    margin-top: 0;
+}
+
+h3 {
+    color: rgb(241, 164, 177);
+    font-size: xx-large;
+    font-weight: lighter;
+    margin-bottom: 0;
+}
+
+
+.planets-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.planet {
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.619);
+    border-radius: 50%;
+}
+
+.planet-0 {
+    height: 40rem;
+    width: 40rem;
+    margin-left: -35rem;
+    background: linear-gradient(20deg, goldenrod, yellow);
+}
+
+.planet-1 {
+    height: 2rem;
+    width: 2rem;
+    background-color: grey;
+}
+
+.planet-2 {
+    height: 3rem;
+    width: 3rem;
+    background-color: orangered;
+}
+
+.planet-3 {
+    height: 3rem;
+    width: 3rem;
+    background-color: cornflowerblue;
+}
+
+.planet-4 {
+    height: 2rem;
+    width: 2rem;
+    background-color: crimson;
+}
+
+.planet-5 {
+    height: 10rem;
+    width: 10rem;
+    background-color: darksalmon;
+}
+
+.planet-6 {
+    height: 7rem;
+    width: 7rem;
+    background-color: peru;
+}
+
+.planet-7 {
+    height: 5rem;
+    width: 5rem;
+    background-color: skyblue;
+}
+
+.planet-8 {
+    height: 4rem;
+    width: 4rem;
+    background-color: royalblue;
+}
+
+.planet:hover {
+    transform: scale(1.1);
+    transition: transform .5s;
+    cursor: pointer;
+    box-shadow: 0px 0px 40px rgba(255, 255, 255, 0.619);
+}
+
