@@ -8,7 +8,7 @@ Förslag på UI hittar ni [här](https://www.figma.com/file/Snw8n1gba7Mbk6TCLEAB
 ## API
 **Base URL**
 ```
-[https://majazocom.github.io/Data/solaris.json](https://majazocom.github.io/Data/solaris.json)
+https://majazocom.github.io/Data/solaris.json
 ```
 
 **Methods**
