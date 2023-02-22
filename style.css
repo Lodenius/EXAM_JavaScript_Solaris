@@ -34,6 +34,7 @@ header {
 h1 {
     font-size: 50px;
     margin: 0;
+    letter-spacing: 10px;
 }
 
 h2 {
@@ -61,14 +62,10 @@ h3 {
     border-radius: 50%;
 }
 
-.planet p {
-    color: transparent;
-}
-
 .planet-0 {
     height: 35rem;
     width: 30rem;
-    margin-left: -27rem;
+    margin-left: -25rem;
     background: linear-gradient(20deg, goldenrod, yellow);
     box-shadow: 0px 0px 30px rgba(58, 58, 58, 0.767) inset, 0px 0px 25px rgb(224, 186, 36);
     transform: translatey(0px);
@@ -193,6 +190,7 @@ h3 {
     padding-bottom: 3rem;
     display: flex;
     flex-direction: column;
+    box-shadow: 0px 0px 10px rgb(58, 58, 58) inset, 0px 0px 10px rgba(255, 255, 255, 0.688);
 }
 
 .divider {
@@ -223,20 +221,21 @@ h3 {
 }
 
 .close-overlay {
-    margin-top: 1rem;
+    margin-top: 1.5rem;
     margin-left: auto;
     border: none;
     background-color: lightpink;
     padding: 5px 10px;
     border-radius: 5px;
-    box-shadow: 1px 1px 10px rgba(114, 114, 140, 0.423);
+    /* box-shadow: 0px 0px 5px rgba(130, 129, 129, 0.735); */
     font-style: italic;
 }
 
 .close-overlay:hover {
-    transform: scale(1.05);
+    transform: scale(0.98);
     transition: transform .1s;
     cursor: pointer;
+    box-shadow: 1px 1px 10px rgba(114, 114, 140, 0.423) inset;
 }
 
 @keyframes float {
@@ -251,7 +250,7 @@ h3 {
 	}
 }
 
-.navigate-planets {
+/* .navigate-planets {
     display: flex;
     justify-content: space-between;
 }
@@ -259,4 +258,4 @@ h3 {
 .backwards,
 .forwards  {
     font-size: x-large;
-}
+} */
