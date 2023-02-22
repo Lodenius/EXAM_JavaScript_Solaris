@@ -1,40 +1,30 @@
-* {
-    box-sizing: border-box;
-}
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Lora&family=Secular+One&display=swap');
 
 body {
-    height: 98vh;
+    height: 97vh;
     width: 98vw;
     background-image: url(./img/ivan-guerrero-dR7L9hHWvAI-unsplash.jpg);
     background-size: cover;
     color: white;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Secular One', sans-serif;
 }
 
 .planet-search {
     display: flex;
-    justify-content: end;
+    justify-content: start;
+    margin-left: 2rem;
 }
 
-input[type=text]{
+input[type=search]{
     border: none;
     height: 30px;
-    border-bottom: 1px solid pink;
-    background-color: rgba(0, 0, 0, 0);
+    width: 15rem;
+    border-bottom: 1px solid lightpink;
+    background-color: transparent;
     color: white;
     margin-right: 1rem;
-}
-
-input[type=button]{
-    background-color: #18335100;
-    border: none;
-    color: white;
-    cursor: pointer;
+    font-size: smaller;
 }
 
 header {
@@ -43,87 +33,213 @@ header {
 
 h1 {
     font-size: 50px;
-    margin-top: 0;
+    margin: 0;
+}
+
+h2 {
+    margin-top: .3rem;
+    font-weight: normal;
 }
 
 h3 {
-    color: rgb(241, 164, 177);
+    color: lightpink;
     font-size: xx-large;
-    font-weight: lighter;
-    margin-bottom: 0;
+    font-weight: 400;
+    letter-spacing: 20px;
+    margin: 0;
+    font-family: 'Lora', serif;
 }
 
-
-.planets-container {
+.space-container {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    margin-top: -1rem;
 }
 
 .planet {
-    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.619);
     border-radius: 50%;
 }
 
 .planet-0 {
-    height: 40rem;
-    width: 40rem;
-    margin-left: -35rem;
+    height: 35rem;
+    width: 30rem;
+    margin-left: -27rem;
     background: linear-gradient(20deg, goldenrod, yellow);
+    box-shadow: 0px 0px 30px rgba(58, 58, 58, 0.767) inset, 0px 0px 25px rgb(224, 186, 36);
+    transform: translatey(0px);
+	animation: float 9s ease-in-out infinite;
 }
 
 .planet-1 {
     height: 2rem;
     width: 2rem;
     background-color: grey;
+    box-shadow: 0px 0px 20px rgba(58, 58, 58, 0.767) inset, 0px 0px 10px rgb(222, 221, 221);
+    transform: translatey(0px);
+	animation: float 6s ease-in-out infinite;
 }
 
 .planet-2 {
     height: 3rem;
     width: 3rem;
     background-color: orangered;
+    box-shadow: 0px 0px 30px rgba(58, 58, 58, 0.767) inset, 0px 0px 20px orangered;
+    transform: translatey(0px);
+	animation: float 8s ease-in-out infinite;
 }
 
 .planet-3 {
     height: 3rem;
     width: 3rem;
     background-color: cornflowerblue;
+    box-shadow: 0px 0px 30px rgba(58, 58, 58, 0.767) inset, 0px 0px 20px cornflowerblue;
+    transform: translatey(0px);
+	animation: float 5s ease-in-out infinite;
 }
 
 .planet-4 {
     height: 2rem;
     width: 2rem;
     background-color: crimson;
+    box-shadow: 0px 0px 20px rgba(58, 58, 58, 0.767) inset, 0px 0px 20px crimson;
+    transform: translatey(0px);
+	animation: float 7s ease-in-out infinite;
 }
 
 .planet-5 {
     height: 10rem;
     width: 10rem;
     background-color: darksalmon;
+    box-shadow: 0px 0px 30px rgba(58, 58, 58, 0.767) inset, 0px 0px 20px darksalmon;
+    transform: translatey(0px);
+	animation: float 6s ease-in-out infinite;
 }
 
 .planet-6 {
     height: 7rem;
     width: 7rem;
     background-color: peru;
+    box-shadow: 0px 0px 30px rgba(58, 58, 58, 0.767) inset, 0px 0px 20px peru;
+    transform: translatey(0px);
+	animation: float 4s ease-in-out infinite;
 }
 
 .planet-7 {
     height: 5rem;
     width: 5rem;
     background-color: skyblue;
+    box-shadow: 0px 0px 30px rgba(58, 58, 58, 0.767) inset, 0px 0px 20px skyblue;
+    transform: translatey(0px);
+	animation: float 5s ease-in-out infinite;
 }
 
 .planet-8 {
     height: 4rem;
     width: 4rem;
     background-color: royalblue;
+    box-shadow: 0px 0px 30px rgba(58, 58, 58, 0.767) inset, 0px 0px 20px royalblue;
+    transform: translatey(0px);
+	animation: float 7s ease-in-out infinite;
 }
 
 .planet:hover {
-    transform: scale(1.1);
-    transition: transform .5s;
+    transform: scale(1.05);
+    transition: transform 1s;
     cursor: pointer;
-    box-shadow: 0px 0px 40px rgba(255, 255, 255, 0.619);
 }
 
+.space-overlay {
+    background-color: rgba(66, 87, 162, 0.302);
+    width: 99vw;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    display: none;
+    color: black;
+}
+
+.overlay-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.planet-card {
+    background-color: #fff;
+    border-radius: 10px;
+    width: 40rem;
+    max-width: 100%;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.divider {
+    height: 1px;
+    background-color: black;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.planet-card h3 {
+    font-weight: 900;
+    font-size: 40px;
+}
+
+.bold {
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.desc {
+    font-style: italic;
+}
+
+.planet-card__info {
+    display: grid;
+    grid-template-columns: auto auto;
+    text-align: center;
+}
+
+.close-overlay {
+    margin-top: 1rem;
+    margin-left: auto;
+    border: none;
+    background-color: lightpink;
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px rgba(114, 114, 140, 0.423);
+    font-style: italic;
+}
+
+.close-overlay:hover {
+    transform: scale(1.05);
+    transition: transform .1s;
+    cursor: pointer;
+}
+
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-10px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
+
+.navigate-planets {
+    display: flex;
+    justify-content: space-between;
+}
+
+.backwards,
+.forwards  {
+    font-size: x-large;
+}
