@@ -1,6 +1,8 @@
 const solisURL = 'https://majazocom.github.io/Data/solaris.json';
 const planetsContainer = document.querySelector('.space-container');
 const overlayEl = document.querySelector('.space-overlay');
+const searchPlanet = document.querySelector('#input-search');
+
 let planets = [];
 
 async function getSolarSystem() {
@@ -15,13 +17,14 @@ function renderPlanetsToUI(){
         let planetEl = document.createElement('div');
         planetEl.classList.add('planet', `planet-${planet.id}`);
         planetEl.setAttribute('id', planet.id);
+        planetEl.innerHTML = `<p>${planet.name}</p>`;
         
         planetsContainer.appendChild(planetEl);
 
         planetEl.addEventListener('click', () => {
             overlayOn(planet);
         });
-        planet.HTML = planetEl
+
     });
 };
 getSolarSystem();
@@ -91,3 +94,88 @@ function overlayOn(planet) {
 //     }
     
 // }
+
+
+searchPlanet.addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+        console.log('Ta mig till', event.target.value);
+        let planetIndex = planets.findIndex(planet => planet.name.toLowerCase().includes(event.target.value.toLowerCase()));
+        console.log(planetIndex);
+        if (planetIndex > -1) {
+            planets = planets[planetIndex];
+            overlayOn();
+        } else {
+            alert('Jag finns inte i det här solsystemet!');
+        }
+    }
+});
+
+
+
+// searchPlanet.addEventListener('keyup', e => {
+//     let search = e.target.value.toLowerCase();
+//     // let filteredPlanet = planets.filter(planet => {
+//     //     return planet.name.toLowerCase().includes(search);
+//     // });
+//     let filteredPlanet = planets.findIndex(planet => planet.name.toLowerCase().includes(e.target.value.toLowerCase()));
+//     if (e.keyCode === 13) {
+//         console.log('Ta mig till', e.target.value);
+//         console.log(filteredPlanet);
+//         if (filteredPlanet === search) {
+//             planets = planets[filteredPlanet];
+//             overlayOn();
+//         } 
+//         // else {
+//         //     alert('Jag finns inte i det här solsystemet!');
+//         // };
+//     };
+// });
+
+
+// searchPlanet.addEventListener('keyup', function(input){
+//     let indexOfPlanet = planets.findIndex(planet => planet.name.toLowerCase().includes(input.target.value.toLowerCase()));
+//     if (input.keyCode === 13) {
+//         console.log('Ta mig till', input.target.value);
+//         console.log(indexOfPlanet);
+//         // if (indexOfPlanet > -1) {
+//         //     chosenPlanet = planets[indexOfPlanet];
+//         //     overlayOn();
+//         // } else {
+//         //     alert('Jag finns inte i det här solsystemet!');
+//         // };
+//     };
+// });
+
+// searchPlanet.addEventListener('input', e => {
+//     let value = e.target.value.toLowerCase();
+//     planets.forEach(planet => {
+//         let isVisible = planet.name.includes(value);
+//         planet.element.classList.toggle('hide', !isVisible)
+//     })
+
+//     // console.log(planets);
+
+// })
+
+// searchPlanet.addEventListener('keyup', (e) => {
+//     let search = e.target.value.toLowerCase();
+//     let filteredPlanet = planets.filter(planet => {
+//         return planet.name.toLowerCase().includes(search);
+//     });
+//     console.log(filteredPlanet);
+// });
+
+
+// searchPlanet.addEventListener('input', e => {
+//     let value = e.target.value.toLowerCase()
+//     let filteredPlanet = planets;
+//     console.log(value);
+//     filteredPlanet.forEach(planet => {
+//         console.log(planet)
+//         const isVisible = planet.element.classList.includes(value);
+//         console.log(isVisible)
+//         planet.classList.toggle("hide", !isVisible);
+
+//     })
+// })
