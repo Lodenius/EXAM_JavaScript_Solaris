@@ -80,7 +80,6 @@ function overlayOn() {
 };
 
 searchPlanet.addEventListener("keyup", function(event) {
-    event.preventDefault();
     if (event.keyCode === 13) {
         // console.log('Ta mig till', event.target.value);
         let planetIndex = planets.findIndex(planet => planet.name.toLowerCase().includes(event.target.value.toLowerCase()));
@@ -89,7 +88,7 @@ searchPlanet.addEventListener("keyup", function(event) {
             body = planets[planetIndex];
             overlayOn();
         } else {
-            alert('Jag finns inte i det här solsystemet! 🪐');
+            alert(event.target.value + ' finns inte i det här solsystemet! 🪐');
         }
     }
 });

@@ -8,11 +8,18 @@
     <title>Solaris</title>
 </head>
 <body>
-    <div class="space-overlay"></div>
-
     <nav class="planet-search">
         <input type="search" id="input-search" placeholder="Sök bland himlakropparna">
+        <nav class="planet-dropdown">
+            <button class="planet-dropdown__btn">
+                <button class="sun">
+                    <p></p>
+                </button>
+            </button>
+        </nav>
     </nav>  
+
+    <div class="space-overlay"></div>
 
     <header>
         <h1>SOLSYSTEMET</h1>
@@ -22,7 +29,6 @@
     <main>
         <section class="space-container"></section>
     </main>
-
 
     <script src="./script.js"></script>
 </body>
