@@ -5,35 +5,32 @@ body {
     height: 97vh;
     width: 98vw;
     background-image: url(./img/ivan-guerrero-dR7L9hHWvAI-unsplash.jpg);
+    background-repeat: no-repeat;
     background-size: cover;
-    color: white;
     font-family: 'Secular One', sans-serif;
-}
-
-.planet-search {
-    display: flex;
-    justify-content: start;
-    margin-left: 2rem;
 }
 
 input[type=search] {
     border: none;
     height: 30px;
-    width: 15rem;
+    width: 12rem;
     border-bottom: 1px solid lightpink;
     background-color: transparent;
     color: white;
-    margin-right: 1rem;
+    margin-left: 1rem;
     font-size: smaller;
 }
 
 header {
-    text-align: center;
+    text-align: right;
+    margin-bottom: -1rem;
+    margin-right: 1rem;
 }
 
 h1 {
     font-size: 50px;
     margin: 0;
+    color: white;
     letter-spacing: 10px;
 }
 
@@ -51,25 +48,31 @@ h3 {
     font-family: 'Lora', serif;
 }
 
+p {
+    font-size: small;
+    margin-top: .5rem;
+}
+
 .space-container {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    margin-top: -1rem;
+    margin-top: -2rem;
 }
 
 .planet {
     border-radius: 50%;
+    transform: translatey(0px);
 }
 
 .planet-0 {
-    height: 35rem;
+    height: 30rem;
     width: 30rem;
     margin-left: -25rem;
-    background: linear-gradient(20deg, goldenrod, yellow);
+    background-color: rgb(237, 189, 65);
     box-shadow: 0px 0px 30px rgba(58, 58, 58, 0.767) inset, 0px 0px 25px rgb(224, 186, 36);
-    transform: translatey(0px);
-	animation: float 9s ease-in-out infinite;
+	animation: levitate 9s ease-in-out infinite;
+    z-index: 1;
 }
 
 .planet-1 {
@@ -77,8 +80,7 @@ h3 {
     width: 2rem;
     background-color: grey;
     box-shadow: 0px 0px 20px rgba(58, 58, 58, 0.767) inset, 0px 0px 10px rgb(222, 221, 221);
-    transform: translatey(0px);
-	animation: float 6s ease-in-out infinite;
+	animation: levitate 6s ease-in-out infinite;
 }
 
 .planet-2 {
@@ -86,8 +88,7 @@ h3 {
     width: 3rem;
     background-color: orangered;
     box-shadow: 0px 0px 30px rgba(58, 58, 58, 0.767) inset, 0px 0px 20px orangered;
-    transform: translatey(0px);
-	animation: float 8s ease-in-out infinite;
+	animation: levitate 8s ease-in-out infinite;
 }
 
 .planet-3 {
@@ -95,8 +96,7 @@ h3 {
     width: 3rem;
     background-color: cornflowerblue;
     box-shadow: 0px 0px 30px rgba(58, 58, 58, 0.767) inset, 0px 0px 20px cornflowerblue;
-    transform: translatey(0px);
-	animation: float 5s ease-in-out infinite;
+	animation: levitate 5s ease-in-out infinite;
 }
 
 .planet-4 {
@@ -104,8 +104,7 @@ h3 {
     width: 2rem;
     background-color: crimson;
     box-shadow: 0px 0px 20px rgba(58, 58, 58, 0.767) inset, 0px 0px 20px crimson;
-    transform: translatey(0px);
-	animation: float 7s ease-in-out infinite;
+	animation: levitate 7s ease-in-out infinite;
 }
 
 .planet-5 {
@@ -113,8 +112,7 @@ h3 {
     width: 10rem;
     background-color: darksalmon;
     box-shadow: 0px 0px 30px rgba(58, 58, 58, 0.767) inset, 0px 0px 20px darksalmon;
-    transform: translatey(0px);
-	animation: float 6s ease-in-out infinite;
+	animation: levitate 6s ease-in-out infinite;
 }
 
 .planet-6 {
@@ -122,8 +120,7 @@ h3 {
     width: 7rem;
     background-color: peru;
     box-shadow: 0px 0px 30px rgba(58, 58, 58, 0.767) inset, 0px 0px 20px peru;
-    transform: translatey(0px);
-	animation: float 4s ease-in-out infinite;
+	animation: levitate 4s ease-in-out infinite;
 }
 
 .planet-6::after {
@@ -131,9 +128,9 @@ h3 {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 10rem;
+    width: 12rem;
     height: 1rem; 
-    border: .5rem solid rgb(179, 113, 48);
+    border: .5rem solid rgb(180, 112, 45);
     border-top: none;
     border-radius: 50%;
     transform: translate(-50%, -50%) rotate(-10deg); 
@@ -144,8 +141,7 @@ h3 {
     width: 5rem;
     background-color: skyblue;
     box-shadow: 0px 0px 30px rgba(58, 58, 58, 0.767) inset, 0px 0px 20px skyblue;
-    transform: translatey(0px);
-	animation: float 5s ease-in-out infinite;
+	animation: levitate 5s ease-in-out infinite;
 }
 
 .planet-8 {
@@ -153,8 +149,7 @@ h3 {
     width: 4rem;
     background-color: royalblue;
     box-shadow: 0px 0px 30px rgba(58, 58, 58, 0.767) inset, 0px 0px 20px royalblue;
-    transform: translatey(0px);
-	animation: float 7s ease-in-out infinite;
+	animation: levitate 7s ease-in-out infinite;
 }
 
 .planet:hover {
@@ -164,13 +159,16 @@ h3 {
 }
 
 .space-overlay {
-    background-color: rgba(66, 87, 162, 0.302);
+    background-color: transparent;
     width: 99vw;
-    height: 100%;
+    height: 98%;
     position: absolute;
-    z-index: 1;
+    z-index: 2;
     display: none;
     color: black;
+    margin-top: -2rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 50px rgb(0, 0, 0)
 }
 
 .overlay-container {
@@ -185,19 +183,17 @@ h3 {
     border-radius: 10px;
     width: 40rem;
     max-width: 100%;
-    padding-left: 3rem;
-    padding-right: 3rem;
-    padding-bottom: 3rem;
+    padding: 0 3rem 1rem 3rem;
     display: flex;
     flex-direction: column;
-    box-shadow: 0px 0px 10px rgb(58, 58, 58) inset, 0px 0px 10px rgba(255, 255, 255, 0.688);
+    box-shadow: 0px 0px 5px rgb(0, 0, 0) inset, 0px 0px 10px rgba(255, 255, 255, 0.802);
 }
 
 .divider {
     height: 1px;
     background-color: black;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
 }
 
 .planet-card h3 {
@@ -207,6 +203,7 @@ h3 {
 
 .bold {
     font-weight: bold;
+    font-size: medium;
     margin-bottom: 0;
 }
 
@@ -227,8 +224,6 @@ h3 {
     background-color: lightpink;
     padding: 5px 10px;
     border-radius: 5px;
-    /* box-shadow: 0px 0px 5px rgba(130, 129, 129, 0.735); */
-    font-style: italic;
 }
 
 .close-overlay:hover {
@@ -238,24 +233,55 @@ h3 {
     box-shadow: 1px 1px 10px rgba(114, 114, 140, 0.423) inset;
 }
 
-@keyframes float {
+@keyframes levitate {
 	0% {
 		transform: translatey(0px);
-	}
-	50% {
+	} 50% {
 		transform: translatey(-10px);
-	}
-	100% {
+	} 100% {
 		transform: translatey(0px);
 	}
 }
 
-/* .navigate-planets {
+.navigate-planets {
     display: flex;
     justify-content: space-between;
+    margin-top: 1rem;
 }
 
-.backwards,
-.forwards  {
+.navigate-btn  {
     font-size: x-large;
-} */
+    border: none;
+    background-color: white;
+}
+
+.navigate-btn:hover {
+    background-color: pink;
+    cursor: pointer;
+    border-radius: 30%;
+}
+
+.spaceship {
+    font-size: xx-large;
+    margin-left: 2rem;
+    margin-bottom: 0;
+    transform: translatey(0px);
+	animation: orbit 15s infinite;
+    text-shadow: 0 0 10px #ffffff7b, 0 0 20px #e2608d;
+}
+
+@keyframes orbit {
+	0% {
+		transform: translatey(100px);
+	} 20% {
+		transform: translatey(-50px);
+	} 40% {
+		transform: translatey(60px);
+	} 60% {
+		transform: translatex(100px);
+	} 80% {
+		transform: translatey(500px);
+	} 100% {
+		transform: translatey(100px);
+	}
+}
