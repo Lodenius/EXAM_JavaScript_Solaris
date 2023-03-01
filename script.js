@@ -144,7 +144,7 @@ searchPlanet.addEventListener("keyup", function(event) {
 });
 
 
-///////////////////
+//////////////////
 /*
 const solisURL = 'https://majazocom.github.io/Data/solaris.json';
 const planetsContainer = document.querySelector('.space-container');
